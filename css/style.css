@@ -44,7 +44,6 @@ input, textarea { font: inherit; }
 .heading-lg {
   font-size: clamp(36px, 5vw, 88px);
   line-height: 1;
-  font-weight: 700;
 }
 .heading-md {
   font-size: clamp(22px, 2.5vw, 32px);
@@ -184,6 +183,7 @@ input, textarea { font: inherit; }
 }
 .hero-inner {
   display: flex;
+  direction: ltr;
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
@@ -193,7 +193,7 @@ input, textarea { font: inherit; }
 .hero-left {
   position: relative;
   flex-shrink: 0;
-  width: 47%;
+  width: 52%;
 }
 .hero-image-wrap {
   position: relative;
@@ -217,8 +217,8 @@ input, textarea { font: inherit; }
 /* Nail shape picker */
 .nail-picker {
   position: absolute;
-  top: 117px;
-  right: -5px;
+  top: 16%;
+  right: -10%;
   width: min(338px, 37%);
   background: rgba(253,251,247,0.64);
   backdrop-filter: blur(18px);
@@ -250,8 +250,8 @@ input, textarea { font: inherit; }
 /* Color panel */
 .color-panel {
   position: absolute;
-  bottom: -20px;
-  right: -5px;
+  top: 39%;
+  right: -10%;
   width: min(391px, 43%);
   background: rgba(253,251,247,0.64);
   backdrop-filter: blur(18px);
@@ -345,7 +345,7 @@ input, textarea { font: inherit; }
 
 @media (max-width: 1024px) {
   .hero-inner {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 60px 20px 60px;
     gap: 40px;
   }
@@ -353,7 +353,7 @@ input, textarea { font: inherit; }
   .hero-right { align-items: flex-end; width: 100%; }
   .hero-image-wrap { padding-bottom: 72%; }
   .nail-picker { top: 40px; right: 0; width: 280px; }
-  .color-panel { bottom: -100px; right: 0; width: 100%; position: relative; bottom: auto; margin-top: 12px; }
+  .color-panel { position: relative; top: auto; right: auto; width: 100%; margin-top: 12px; }
   .hero-heading { font-size: clamp(36px, 9vw, 72px); }
   .hero-subtext { font-size: 18px; }
 }
@@ -380,6 +380,7 @@ input, textarea { font: inherit; }
 .section-title-block .bold { font-weight: 700; display: block; }
 .cards-row {
   display: flex;
+  direction: ltr;
   gap: 22px;
 }
 .card {
@@ -426,6 +427,7 @@ input, textarea { font: inherit; }
   border-radius: var(--radius-2xl);
   padding: 80px 160px;
   display: flex;
+  direction: ltr;
   align-items: center;
   justify-content: center;
   gap: 80px;
@@ -515,6 +517,7 @@ input, textarea { font: inherit; }
   overflow: hidden;
   min-height: 510px;
   display: flex;
+  direction: ltr;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -572,6 +575,7 @@ input, textarea { font: inherit; }
 .rating-num { font-size: 24px; font-weight: 400; }
 .stylist-name-service {
   display: flex;
+  direction: rtl;
   align-items: center;
   gap: 8px;
   font-size: 20px;
@@ -616,6 +620,7 @@ input, textarea { font: inherit; }
 }
 .faq-inner {
   display: flex;
+  direction: ltr;
   gap: 80px;
   align-items: flex-start;
   justify-content: flex-end;
