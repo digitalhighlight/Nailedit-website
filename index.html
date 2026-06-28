@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nailedit — תפסיקי להסביר, תתחילי להראות</title>
+  <meta name="description" content="אפליקציה אחת שמאפשרת להדגים עיצובים שונים, למצוא לקחות, ולנהל את הפגישות שלך ביעילות." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/cms-data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- =============================================
+     HEADER (Fixed)
+     ============================================= -->
+<header id="header">
+  <div class="header-inner">
+    <!-- Logo (right side in RTL) -->
+    <div class="header-logo">
+      <a href="/">
+        <img src="https://www.figma.com/api/mcp/asset/d2e2b7a8-abb8-4524-a64f-20548f22e524"
+             alt="Nailedit"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <span style="display:none;font-size:22px;font-weight:700;letter-spacing:-1px;">Nailedit</span>
+      </a>
+    </div>
+
+    <!-- Desktop Nav (center) -->
+    <nav class="header-nav" aria-label="ניווט ראשי">
+      <a href="#section-faq" data-scroll-to="section-faq" data-cms-text="nav.faq">שאלות נפוצות</a>
+      <a href="#section-how-it-works" data-scroll-to="section-how-it-works" data-cms-text="nav.howItWorks">איך זה עובד</a>
+      <a href="#section-benefits" data-scroll-to="section-benefits" data-cms-text="nav.benefits">יתרונות</a>
+      <a href="#section-how-it-works" data-scroll-to="section-how-it-works" data-cms-text="nav.product">המוצר</a>
+    </nav>
+
+    <!-- Actions (left side in RTL) -->
+    <div class="header-actions">
+      <a href="/9891" class="header-cms-link" data-cms-text="nav.login">התחברות</a>
+      <a href="#sign-up-form" class="btn-signup-header" data-scroll-to="sign-up-form" data-cms-text="nav.signup">הרשמה לפיילוט</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="תפריט" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" aria-label="תפריט נייד">
+    <a href="#section-faq"      data-scroll-to="section-faq">שאלות נפוצות</a>
+    <a href="#section-how-it-works" data-scroll-to="section-how-it-works">איך זה עובד</a>
+    <a href="#section-benefits" data-scroll-to="section-benefits">יתרונות</a>
+    <a href="#sign-up-form"     data-scroll-to="sign-up-form">הרשמה לפיילוט</a>
+    <a href="/9891">התחברות</a>
+  </nav>
+</header>
+
+<!-- =============================================
+     HERO SECTION
+     ============================================= -->
+<section id="section-hero">
+  <div class="hero-inner">
+
+    <!-- LEFT: Hero image + overlays -->
+    <div class="hero-left">
+      <div class="hero-image-wrap" role="img" aria-label="תמונת הגיבור — ידיים עם ציפורניים מעוצבות">
+        <img id="hero-img-green" class="active" data-cms-img="hero.green"
+             src="https://www.figma.com/api/mcp/asset/ffac4fe0-1b4b-4c2a-91a3-577d6e10d062"
+             alt="ציפורניים ירוקות" loading="eager" />
+        <img id="hero-img-blue" data-cms-img="hero.blue"
+             src="https://www.figma.com/api/mcp/asset/5713bf7d-479f-4797-9455-9d2eda2797f0"
+             alt="ציפורניים תכלת" loading="lazy" />
+        <img id="hero-img-dark" data-cms-img="hero.dark"
+             src="https://www.figma.com/api/mcp/asset/d03bdad5-0efc-4a21-915e-25a5bf7934cc"
+             alt="ציפורניים כהות" loading="lazy" />
+        <img id="hero-img-red" data-cms-img="hero.red"
+             src="https://www.figma.com/api/mcp/asset/1855386a-a904-4751-8724-6bf75a02ad08"
+             alt="ציפורניים אדומות" loading="lazy" />
+      </div>
+
+      <!-- Nail shape picker overlay -->
+      <div class="nail-picker" aria-label="בחרי צורת ציפורן">
+        <div class="nail-picker-item active" title="עגול">
+          <img src="https://www.figma.com/api/mcp/asset/a2f85cbc-621d-46ef-937e-82a34ecd8805" alt="צורה 1" />
+        </div>
+        <div class="nail-picker-item" title="מרובע">
+          <img src="https://www.figma.com/api/mcp/asset/5021a749-66ec-4334-8500-fbf65d3ca1d3" alt="צורה 2" />
+        </div>
+        <div class="nail-picker-item" title="שקדים">
+          <img src="https://www.figma.com/api/mcp/asset/e83da6b8-fb28-44fe-b731-6ae128836117" alt="צורה 3" />
+        </div>
+        <div class="nail-picker-item" title="ארוך">
+          <img src="https://www.figma.com/api/mcp/asset/e0a4f42c-c300-4006-b11a-44d8864c6565" alt="צורה 4" />
+        </div>
+        <div class="nail-picker-item" title="מחודד">
+          <img src="https://www.figma.com/api/mcp/asset/e674bb84-81b5-4a56-954e-c356db62c6e9" alt="צורה 5" />
+        </div>
+      </div>
+
+      <!-- Color panel overlay -->
+      <div class="color-panel" aria-label="בחרי צבע">
+        <div class="color-option active" data-color="green" role="button" tabindex="0" aria-label="ירוק מרקר">
+          <div class="color-swatch" style="background:#d9f56a;"></div>
+          <span data-cms-text="color.green">ירוק מרקר</span>
+        </div>
+        <div class="color-option" data-color="dark" role="button" tabindex="0" aria-label="אפור לילה">
+          <div class="color-swatch" style="background:#1f1f1f;"></div>
+          <span data-cms-text="color.dark">אפור לילה</span>
+        </div>
+        <div class="color-option" data-color="red" role="button" tabindex="0" aria-label="טרקוטה">
+          <div class="color-swatch" style="background:#e86f5a;"></div>
+          <span data-cms-text="color.red">טרקוטה</span>
+        </div>
+        <div class="color-option" data-color="blue" role="button" tabindex="0" aria-label="תכלת שמיים">
+          <div class="color-swatch" style="background:#8ed6ff;"></div>
+          <span data-cms-text="color.blue">תכלת שמיים</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Heading + CTA -->
+    <div class="hero-right">
+      <h1 class="hero-heading">
+        <span class="light" data-cms-text="hero.heading1">תפסיקי להסביר,</span>
+        <span class="accent" data-cms-text="hero.heading2">תתחילי להראות.</span>
+      </h1>
+      <p class="hero-subtext" data-cms-text="hero.subtext">
+        אפליקציה אחת שמאפשרת להדגים עיצובים שונים, למצוא לקחות, ולנהל את הפגישות שלך ביעילות.
+      </p>
+      <div class="hero-cta-group">
+        <p class="hero-cta-label" data-cms-text="hero.ctaLabel">הצטרפי לנייליסטיות שכבר נרשמו לשירות</p>
+        <a href="#sign-up-form" class="btn-signup-main" data-scroll-to="sign-up-form" data-cms-text="hero.ctaBtn">
+          הצטרפי לרשימת ההמתנה
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     PROBLEMS SECTION
+     ============================================= -->
+<section id="section-problems">
+  <div class="container">
+    <div class="section-title-block fade-in">
+      <div class="heading-lg">
+        <span class="light" data-cms-text="problems.title1">בזבוז זמן</span>
+        <span class="bold" data-cms-text="problems.title2">שורף לך את הרווח</span>
+      </div>
+    </div>
+    <div class="cards-row">
+      <!-- Card 1: Blue -->
+      <div class="card card-blue fade-in">
+        <div class="card-content">
+          <h3 data-cms-text="problems.card1.title">תמונות לא ריאליסטיות</h3>
+          <p data-cms-text="problems.card1.body">לקוחות מביאות השראות מאינסטגרם שלא מתאימות למבנה הציפורן, לצבע העור ולידיים שלהן. Nailedit עוזרת לך לפתור את זה.</p>
+        </div>
+        <div class="card-image">
+          <img data-cms-img="problems.card1"
+               src="https://www.figma.com/api/mcp/asset/593ab681-f9f4-4326-ba24-08fce2826edd"
+               alt="תמונות לא ריאליסטיות" loading="lazy" />
+        </div>
+      </div>
+      <!-- Card 2: Dark -->
+      <div class="card card-dark fade-in">
+        <div class="card-content">
+          <h3 data-cms-text="problems.card2.title">אכזבות מהתוצאה</h3>
+          <p data-cms-text="problems.card2.body">הלקוחה ביקשה 'תכלת' אבל התכוונה למשהו אחר? הסימולטור מונע חוסר הבנות ותיקונים יקרים.</p>
+        </div>
+        <div class="card-image">
+          <img data-cms-img="problems.card2"
+               src="https://www.figma.com/api/mcp/asset/17ccc829-eee9-4e7c-a9ae-881b3fb78f5c"
+               alt="אכזבות מהתוצאה" loading="lazy" />
+        </div>
+      </div>
+      <!-- Card 3: Red -->
+      <div class="card card-red fade-in">
+        <div class="card-content">
+          <h3 data-cms-text="problems.card3.title">התלבטויות מייגעות</h3>
+          <p data-cms-text="problems.card3.body">את מאבדת זמן יקר בכל תור רק על התלבטויות מיותרות. זה זמן שיכולת להכניס בו עוד לקוחות.</p>
+        </div>
+        <div class="card-image">
+          <img data-cms-img="problems.card3"
+               src="https://www.figma.com/api/mcp/asset/4235ab15-cab7-4483-9932-0e497448cfe5"
+               alt="התלבטויות מייגעות" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     HOW IT WORKS SECTION
+     ============================================= -->
+<section id="section-how-it-works">
+  <div class="container">
+    <div class="how-it-works-card fade-in">
+      <div class="how-left">
+        <h2 class="how-heading">
+          <span class="light" data-cms-text="howItWorks.heading1">זה עובד בכמה</span>
+          <span class="accent" data-cms-text="howItWorks.heading2">צעדים פשוטים</span>
+        </h2>
+      </div>
+      <div class="how-phone">
+        <img data-cms-img="howItWorks.phone"
+             src="https://www.figma.com/api/mcp/asset/30200de4-7a52-4c11-8805-34c16d47d91e"
+             alt="אפליקציית Nailedit" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     BENEFITS SECTION
+     ============================================= -->
+<section id="section-benefits">
+  <div class="container">
+    <div class="section-title-block fade-in">
+      <div class="heading-lg">
+        <span class="light" data-cms-text="benefits.title1">חיסכון בזמן</span>
+        <span class="bold" data-cms-text="benefits.title2">שמשפיע על הרווח</span>
+      </div>
+    </div>
+    <div class="cards-row">
+      <!-- Card 1 -->
+      <div class="card card-green fade-in">
+        <div class="card-content">
+          <h3 data-cms-text="benefits.card1.title">תיאום ציפיות מדויק</h3>
+          <p data-cms-text="benefits.card1.body">הלקוחה רואה בדיוק איך יראה העיצוב על הידיים שלה לפני שתתחילי לעבוד. אין הפתעות.</p>
+        </div>
+        <div class="card-image">
+          <img data-cms-img="benefits.card1"
+               src="https://www.figma.com/api/mcp/asset/63fca0ff-3d4e-418a-b38f-392ba38ea2c9"
+               alt="תיאום ציפיות" loading="lazy" />
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card card-dark fade-in">
+        <div class="card-content">
+          <h3 data-cms-text="benefits.card2.title">יותר לקוחות בפחות זמן</h3>
+          <p data-cms-text="benefits.card2.body">כשהלקוחה מגיעה עם החלטה מוכנה, התור מתקצר משמעותית ואת יכולה לקבל יותר לקוחות ביום.</p>
+        </div>
+        <div class="card-image">
+          <img data-cms-img="benefits.card2"
+               src="https://www.figma.com/api/mcp/asset/efc60a15-93be-489b-9711-c6450c035d54"
+               alt="יותר לקוחות" loading="lazy" />
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card card-blue fade-in">
+        <div class="card-content">
+          <h3 data-cms-text="benefits.card3.title">חוויית לקוחה מצוינת</h3>
+          <p data-cms-text="benefits.card3.body">לקוחות שמרגישות שהקשיבו להן ושהתוצאה תואמת את הציפיות, חוזרות ומפנות חברות.</p>
+        </div>
+        <div class="card-image">
+          <img data-cms-img="benefits.card3"
+               src="https://www.figma.com/api/mcp/asset/155cbfab-2589-41b0-9cd8-0448dafa9fe6"
+               alt="חוויית לקוחה" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     MAP / CLIENTS SECTION
+     ============================================= -->
+<section id="section-map">
+  <div class="container">
+    <div class="map-header fade-in">
+      <div class="heading-lg">
+        <span class="light" data-cms-text="map.heading1">את מעצבת</span>
+        <span class="bold" data-cms-text="map.heading2">אנחנו מביאים את הלקוחות.</span>
+      </div>
+      <p class="map-subtitle" data-cms-text="map.subtitle">
+        הצטרפות לפיילוט ה-PRO מעניקה לסטודיו שלך מיקום מועדף במפת Nailedit. לקוחות שמעצבות לעצמן ציפורניים באפליקציה מהבית, יופנו ישירות לקביעת תור אצל המקצועניות באזור שלהן.
+      </p>
+      <span class="badge-limited" data-cms-text="map.badge">מספר המשתתפות בכל עיר מוגבל</span>
+    </div>
+
+    <div class="map-card fade-in">
+      <div class="map-bg">
+        <img data-cms-img="map.bg"
+             src="https://www.figma.com/api/mcp/asset/ab3116c4-3b24-494a-a051-0b62d399b1a8"
+             alt="מפת ישראל" loading="lazy" />
+      </div>
+
+      <div class="stylists-list" aria-label="רשימת נייליסטיות">
+        <!-- Stylist 1 -->
+        <div class="stylist-card">
+          <div class="stylist-info">
+            <div class="stylist-meta">
+              <div class="stylist-rating">
+                <span class="star-icon">★</span>
+                <span class="rating-num">4.9</span>
+              </div>
+              <div class="stylist-name-service">
+                <span class="stylist-name">מיטל רבי</span>
+                <span class="stylist-dot"></span>
+                <span class="stylist-service">מניקור רוסי</span>
+              </div>
+            </div>
+            <div class="stylist-location">אשדוד, אשקלון</div>
+          </div>
+          <img class="stylist-photo" data-cms-img="map.stylist1"
+               src="https://www.figma.com/api/mcp/asset/d4ce98a7-a5bb-46a5-96f5-6b14b1bf74ff"
+               alt="מיטל רבי" loading="lazy" />
+        </div>
+        <!-- Stylist 2 -->
+        <div class="stylist-card featured">
+          <div class="stylist-info">
+            <div class="stylist-meta">
+              <div class="stylist-rating">
+                <span class="star-icon">★</span>
+                <span class="rating-num">4.9</span>
+              </div>
+              <div class="stylist-name-service">
+                <span class="stylist-name">מיטל רבי</span>
+                <span class="stylist-dot"></span>
+                <span class="stylist-service">מניקור רוסי</span>
+              </div>
+            </div>
+            <div class="stylist-location">ראשון לציון מערב</div>
+          </div>
+          <img class="stylist-photo" data-cms-img="map.stylist2"
+               src="https://www.figma.com/api/mcp/asset/d4ce98a7-a5bb-46a5-96f5-6b14b1bf74ff"
+               alt="מיטל רבי" loading="lazy" />
+        </div>
+        <!-- Stylist 3 -->
+        <div class="stylist-card featured">
+          <div class="stylist-info">
+            <div class="stylist-meta">
+              <div class="stylist-rating">
+                <span class="star-icon">★</span>
+                <span class="rating-num">4.8</span>
+              </div>
+              <div class="stylist-name-service">
+                <span class="stylist-name">סשה קירילוב</span>
+                <span class="stylist-dot"></span>
+                <span class="stylist-service">מניקור רוסי</span>
+              </div>
+            </div>
+            <div class="stylist-location">חולון</div>
+          </div>
+          <img class="stylist-photo" data-cms-img="map.stylist3"
+               src="https://www.figma.com/api/mcp/asset/d4ce98a7-a5bb-46a5-96f5-6b14b1bf74ff"
+               alt="סשה קירילוב" loading="lazy" />
+        </div>
+        <!-- Stylist 4 -->
+        <div class="stylist-card featured">
+          <div class="stylist-info">
+            <div class="stylist-meta">
+              <div class="stylist-rating">
+                <span class="star-icon">★</span>
+                <span class="rating-num">4.8</span>
+              </div>
+              <div class="stylist-name-service">
+                <span class="stylist-name">מיטל רבי</span>
+                <span class="stylist-dot"></span>
+                <span class="stylist-service">מניקור רוסי</span>
+              </div>
+            </div>
+            <div class="stylist-location">אזור</div>
+          </div>
+          <img class="stylist-photo" data-cms-img="map.stylist4"
+               src="https://www.figma.com/api/mcp/asset/d4ce98a7-a5bb-46a5-96f5-6b14b1bf74ff"
+               alt="מיטל רבי" loading="lazy" />
+        </div>
+        <!-- Stylist 5 -->
+        <div class="stylist-card featured">
+          <div class="stylist-info">
+            <div class="stylist-meta">
+              <div class="stylist-rating">
+                <span class="star-icon">★</span>
+                <span class="rating-num">4.7</span>
+              </div>
+              <div class="stylist-name-service">
+                <span class="stylist-name">עדי שמחון</span>
+                <span class="stylist-dot"></span>
+                <span class="stylist-service">מניקור רוסי</span>
+              </div>
+            </div>
+            <div class="stylist-location">אשדוד, אשקלון</div>
+          </div>
+          <img class="stylist-photo" data-cms-img="map.stylist5"
+               src="https://www.figma.com/api/mcp/asset/d4ce98a7-a5bb-46a5-96f5-6b14b1bf74ff"
+               alt="עדי שמחון" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FAQ SECTION
+     ============================================= -->
+<section id="section-faq">
+  <div class="container">
+    <div class="faq-card fade-in">
+      <div class="faq-inner">
+        <!-- FAQ Questions -->
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              <div class="faq-arrow"></div>
+              <span class="q-text" data-cms-text="faq.q1">האם זה יעכב לי את התור?</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner" data-cms-text="faq.a1">
+                ממש לא. הסימולטור מיועד לקצר את זמן ההתלבטות, לא להאריך אותו. רוב הלקוחות מגיעות עם החלטה מוכנה לאחר שמשחקות עם האפליקציה בבית.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              <div class="faq-arrow"></div>
+              <span class="q-text" data-cms-text="faq.q2">האם זה מתאים לכל סוגי הציפורניים?</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner" data-cms-text="faq.a2">
+                כן! הסימולטור עובד עם ציפורניים טבעיות, ג'ל, אקריל ועוד. המערכת מזהה את מבנה הציפורן ומתאימה את ההדגמה בהתאם.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              <div class="faq-arrow"></div>
+              <span class="q-text" data-cms-text="faq.q3">האם זה בחינם?</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner" data-cms-text="faq.a3">
+                הפיילוט לנייליסטיות מוצע ללא עלות. לאחר שלב הפיילוט, נציג תוכניות מנוי שיתאימו לכל גודל עסק.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              <div class="faq-arrow"></div>
+              <span class="q-text" data-cms-text="faq.q4">איך הלקוחות מוצאות אותי?</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner" data-cms-text="faq.a4">
+                לקוחות שמשתמשות באפליקציה ומחפשות נייליסטית באזורן יוכלו לראות את הפרופיל שלך ולקבוע תור ישירות.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ Title -->
+        <div class="faq-title-block" data-cms-text="faq.title">שאלות נפוצות</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     SIGN-UP FORM SECTION
+     ============================================= -->
+<section id="sign-up-form">
+  <div class="container">
+    <div class="signup-card fade-in">
+      <h2 class="signup-heading">
+        <span class="bold" data-cms-text="signup.heading1">הצטרפות </span>
+        <span class="light" data-cms-text="signup.heading2">לרשימת המתנה</span>
+      </h2>
+      <form class="signup-form" id="signup-form-el" novalidate>
+        <div style="width:100%;display:flex;flex-direction:column;gap:24px;">
+          <div class="form-row">
+            <input type="text"  class="form-field" name="business" placeholder="* שם העסק" required data-cms-text-ph="signup.field1" />
+            <input type="text"  class="form-field" name="name"     placeholder="* שם מלא"  required data-cms-text-ph="signup.field2" />
+          </div>
+          <div class="form-row">
+            <input type="tel"   class="form-field" name="phone"    placeholder="* טלפון"   required data-cms-text-ph="signup.field3" />
+            <input type="email" class="form-field" name="email"    placeholder="אימייל"            data-cms-text-ph="signup.field4" />
+          </div>
+        </div>
+        <button type="submit" class="btn-signup-form" data-cms-text="signup.btn">הצטרפי לרשימת ההמתנה</button>
+      </form>
+      <div class="form-success" role="alert" data-cms-text="signup.success">🎉 נרשמת בהצלחה! ניצור איתך קשר בקרוב.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer id="footer">
+  <div class="footer-logo-wrap">
+    <img class="footer-logo-img"
+         src="https://www.figma.com/api/mcp/asset/e01496f9-7f8f-4b0f-a7af-84e3b76f0aa8"
+         alt="Nailedit"
+         onerror="this.style.display='none';document.getElementById('footer-text').style.display='block';"
+         loading="lazy" />
+    <div id="footer-text" style="display:none;font-size:clamp(60px,10vw,180px);font-weight:700;color:#d9f56a;text-align:center;padding:60px 0;">
+      Nailedit
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-cms-text="footer.rights">© 2025 Nailedit. כל הזכויות שמורות.</p>
+    <a href="/9891">ניהול תוכן</a>
+  </div>
+</footer>
+
+</body>
+</html>
