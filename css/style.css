@@ -88,6 +88,7 @@ input, textarea { font: inherit; }
 .header-logo img {
   height: 36px;
   width: auto;
+  mix-blend-mode: multiply;
 }
 .header-nav {
   display: flex;
